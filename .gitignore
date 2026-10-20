@@ -66,3 +66,6 @@ CLAUDE.*.md
 AGENTS.md
 .claude/
 .mcp.json
+
+# SQLite database (local)
+/data/

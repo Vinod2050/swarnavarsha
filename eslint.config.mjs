@@ -26,6 +26,7 @@ const eslintConfig = [
   {
     ignores: [
       '.next/',
+      'backups/',
       'next-env.d.ts',
       'src/payload-types.ts',
       'src/payload-generated-schema.ts',
