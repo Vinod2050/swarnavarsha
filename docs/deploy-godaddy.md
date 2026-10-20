@@ -1,5 +1,10 @@
 # Deploying to GoDaddy Deluxe (cPanel)
 
+> **Note (2026-10-21):** the live app uses **GoDaddy Node.js Hosting**, which syncs the GitHub
+> repo and runs install → `pnpm run build` → `pnpm run start` itself; set secrets in its
+> Secrets screen. This cPanel guide is kept only as an alternative. Check hosting changes with
+> GoDaddy's validator: `node ~/.claude/skills/godaddy-nodejs-hosting/scripts/validate-paas.mjs .`
+
 Decisions D-03 (SQLite) and D-09 (GoDaddy shared hosting). The site runs as a cPanel
 **Node.js app**. It is never built on the server: shared hosting has too little memory, and the
 image and database drivers must be Linux builds. GitHub builds it on Linux and gives you a zip.

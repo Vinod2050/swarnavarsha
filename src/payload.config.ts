@@ -131,6 +131,9 @@ export default buildConfig({
     // In production the app applies new migrations itself when it starts, so the server needs
     // no Payload CLI (shared hosting runs only the standalone build)
     prodMigrations: migrations,
+    // Schema changes go through migration files only (pnpm migrate:create, pnpm migrate). Dev-mode
+    // push would mark the database as 'dev', and production then stops at a yes/no prompt.
+    push: false,
   }),
   sharp,
   plugins: [],
