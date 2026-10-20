@@ -1,0 +1,33 @@
+diff --git a/dist/uploads/fetchAPI-stream-file/index.js b/dist/uploads/fetchAPI-stream-file/index.js
+index 1d476eeae9c3ac0a129e47a54c212f8b0b9702bd..7854765eeb5984e11cfc0144cbdfd28641f11730 100644
+--- a/dist/uploads/fetchAPI-stream-file/index.js
++++ b/dist/uploads/fetchAPI-stream-file/index.js	
+@@ -1,5 +1,5 @@
+ import fs from 'fs';
+-export function iteratorToStream(iterator) {
++export function iteratorToStream(iterator, onCancel) {
+     return new ReadableStream({
+         async pull (controller) {
+             const { done, value } = await iterator.next();
+@@ -8,6 +8,12 @@ export function iteratorToStream(iterator) {
+             } else {
+                 controller.enqueue(value);
+             }
++        },
++        // Patched: when the visitor stops a download partway (common with video), close the
++        // file instead of leaving it open until the server restarts
++        async cancel () {
++            onCancel?.();
++            await iterator.return?.();
+         }
+     });
+ }
+@@ -18,7 +24,7 @@ export async function* nodeStreamToIterator(stream) {
+ }
+ export function streamFile({ filePath, options }) {
+     const nodeStream = fs.createReadStream(filePath, options);
+-    const data = iteratorToStream(nodeStreamToIterator(nodeStream));
++    const data = iteratorToStream(nodeStreamToIterator(nodeStream), ()=>nodeStream.destroy());
+     return data;
+ }
+ 

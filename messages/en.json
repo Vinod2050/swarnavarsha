@@ -1,0 +1,862 @@
+{
+  "meta": {
+    "siteName": "Suvarnavarsha Gold",
+    "ogImageAlt": "Suvarnavarsha Gold logo",
+    "home": {
+      "title": "Sell Old Gold in Pune | Suvarnavarsha Gold, Dange Chowk",
+      "description": "Sell old gold and silver in Pune at a fair, transparent rate. Release pledged gold and buy 24K gold coins and bars. Call or WhatsApp Suvarnavarsha Gold.",
+      "keywords": "sell old gold Pune, gold buyer Pune, gold buyer Dange Chowk, gold buyer Chinchwad, gold buyer Pimpri, release pledged gold Pune, 24 carat gold coin Pune, today’s gold rate Pune"
+    },
+    "sell": {
+      "title": "Sell Old Gold & Silver in Pune | Suvarnavarsha Gold",
+      "description": "Sell gold jewellery, coins or bars of any karat in Pune. Purity tested and weighed in front of you, with payment in about 5 minutes.",
+      "keywords": "sell old gold Pune, sell gold jewellery Pune, sell silver Pune, old gold buyer Chinchwad, sell gold coins Pune, gold buyer Dange Chowk"
+    },
+    "pledged": {
+      "title": "Release Pledged Gold in Pune | Gold Loan Closing",
+      "description": "Gold pledged with a bank, NBFC or pawn broker? Suvarnavarsha Gold helps you close the gold loan, release your gold and receive the balance.",
+      "keywords": "release pledged gold Pune, gold loan closing Pune, close gold loan Pune, pledged gold release Chinchwad"
+    },
+    "buy": {
+      "title": "Buy 24K Gold Coins & Bars in Pune | Suvarnavarsha Gold",
+      "description": "24K gold coins, bars and biscuits from 0.5 g to 100 g, BIS Hallmark and HUID certified. Register in advance, stock is limited.",
+      "keywords": "24 carat gold coin Pune, buy 24K gold Pune, gold bar Pune, gold biscuit Pune, BIS Hallmark gold coin, HUID gold coin Pune"
+    },
+    "how": {
+      "title": "How It Works & KYC | Suvarnavarsha Gold, Pune",
+      "description": "Six simple steps to sell your gold: visit, KYC, purity test in front of you, weighing, price at today’s rate and instant payment.",
+      "keywords": "how to sell gold Pune, gold purity test Pune, KYC for selling gold, documents to sell gold, gold selling process"
+    },
+    "about": {
+      "title": "About Us | Suvarnavarsha Gold Ventures Pvt. Ltd., Pune",
+      "description": "Suvarnavarsha Gold Ventures Pvt. Ltd. is a Pune company at Dange Chowk that buys old gold and silver and sells 24K gold with a transparent process.",
+      "keywords": "Suvarnavarsha Gold, Suvarnavarsha Gold Ventures Pvt. Ltd., gold buyer Dange Chowk, gold company Pune"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions | Suvarnavarsha Gold",
+      "description": "Answers about selling old gold, documents, purity testing, payment, pledged gold release and buying 24K gold at Suvarnavarsha Gold, Pune.",
+      "keywords": "sell gold questions, documents to sell gold, gold purity testing, pledged gold release questions, gold payment modes"
+    },
+    "contact": {
+      "title": "Contact Us | Suvarnavarsha Gold, Dange Chowk, Pune",
+      "description": "Visit Suvarnavarsha Gold at VTP Altitude, Dange Chowk, Pune 411033. Call +91 91567 81981 or chat with us on WhatsApp.",
+      "keywords": "Suvarnavarsha Gold contact, Suvarnavarsha Gold address, gold buyer Dange Chowk, gold buyer near Chinchwad, VTP Altitude Dange Chowk"
+    },
+    "privacy": {
+      "title": "Privacy Policy | Suvarnavarsha Gold",
+      "description": "How Suvarnavarsha Gold collects, uses and protects the details you share through this website.",
+      "keywords": "Suvarnavarsha Gold privacy policy"
+    },
+    "terms": {
+      "title": "Terms & Disclaimer | Suvarnavarsha Gold",
+      "description": "Terms of use and disclaimer for the Suvarnavarsha Gold website, including rates, offers and estimates.",
+      "keywords": "Suvarnavarsha Gold terms, disclaimer"
+    },
+    "home2": {
+      "title": "Suvarnavarsha Gold, Pune | Gold Buyers at Dange Chowk",
+      "description": "Sell old gold and silver in Pune at a fair, transparent rate. Release pledged gold and buy 24K gold coins and bars. Call or WhatsApp Suvarnavarsha Gold."
+    },
+    "home3": {
+      "title": "Suvarnavarsha Gold | Sell Gold & Buy 24K Gold in Pune",
+      "description": "Sell old gold and silver in Pune at a fair, transparent rate. Release pledged gold and buy 24K gold coins and bars. Call or WhatsApp Suvarnavarsha Gold."
+    },
+    "home4": {
+      "title": "Suvarnavarsha Gold, Pune | Old Gold Buyers & 24K Gold",
+      "description": "Sell old gold and silver in Pune at a fair, transparent rate. Release pledged gold and buy 24K gold coins and bars. Call or WhatsApp Suvarnavarsha Gold."
+    },
+    "services": {
+      "title": "Our Gold Services in Pune | Suvarnavarsha Gold",
+      "description": "Sell old gold and silver, release pledged gold and buy 24K gold in Pune. See every Suvarnavarsha Gold service on one page.",
+      "keywords": "gold services Pune, sell old gold Pune, release pledged gold Pune, buy 24K gold Pune"
+    },
+    "store": {
+      "title": "24K Gold Online Store, Pune | Suvarnavarsha Gold",
+      "description": "Choose 24K gold from 0.5 g to 100 g online, ask today’s price on WhatsApp and collect at our Dange Chowk branch in Pune.",
+      "keywords": "24K gold coin price Pune, buy gold coin online Pune, 10 gram gold bar Pune, 24 carat gold Dange Chowk"
+    },
+    "notFound": {
+      "title": "Page not found | Suvarnavarsha Gold",
+      "description": "The page you are looking for could not be found."
+    }
+  },
+  "common": {
+    "skipToContent": "Skip to main content",
+    "language": "Language",
+    "call": "Call",
+    "callNow": "Call now",
+    "whatsapp": "WhatsApp us",
+    "whatsappChat": "Chat on WhatsApp",
+    "whatsappMessage": "Hello, I would like to know more about your gold services.",
+    "todaysRate": "Today’s Rate",
+    "directions": "Get directions",
+    "learnMore": "Learn more",
+    "hoursPlaceholder": "Call us for today’s timings",
+    "loading": "Loading the page…"
+  },
+  "nav": {
+    "main": "Main navigation",
+    "breadcrumb": "Breadcrumb",
+    "menu": "Menu",
+    "close": "Close menu",
+    "home": "Home",
+    "home1": "Home 1",
+    "home2": "Home 2",
+    "home3": "Home 3",
+    "home4": "Home 4",
+    "services": "Services",
+    "store": "Online Store",
+    "sellGold": "Sell Gold",
+    "releasePledged": "Release Pledged Gold",
+    "buyGold": "Buy 24K Gold",
+    "howItWorks": "How It Works",
+    "about": "About",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "privacy": "Privacy Policy",
+    "terms": "Terms & Disclaimer",
+    "allServices": "All Services",
+    "staffLogin": "Staff login"
+  },
+  "footer": {
+    "about": "We buy old gold and silver, help release gold pledged with banks, and sell 24K gold coins and bars in Pune.",
+    "quickLinks": "Quick links",
+    "services": "Services",
+    "contact": "Contact",
+    "rights": "All rights reserved.",
+    "backToTop": "Back to top",
+    "legalTitle": "Important Legal Notice",
+    "legalText": "Selling stolen, counterfeit or fake gold is a punishable criminal offence. Customers must produce valid identity proof and all required documents for every transaction. Transactions with persons below 18 years of age are not accepted under any circumstances. Customers aged 18–23 years may be required to obtain consent from their family members. Suvarnavarsha Gold reserves the right to verify customer information, reject any transaction at its sole discretion, and report any suspicious activity to the appropriate legal authorities."
+  },
+  "hero": {
+    "eyebrow": "Gold buyers in Pune · Dange Chowk",
+    "title": "Selling your old gold? Fair rate, transparent process",
+    "subtitle": "We buy old gold and silver, help release gold pledged with banks, and sell 24K gold.",
+    "points": ["Purity tested in front of you", "Payment in about 5 minutes", "Any karat accepted"],
+    "imageAlt": "Gold bangles resting on dark velvet",
+    "modelAlt": "Woman in a traditional Maharashtrian saree and gold jewellery",
+    "slider": {
+      "label": "Highlights",
+      "slide": "Slide {n} of {total}",
+      "previous": "Previous slide",
+      "next": "Next slide",
+      "pause": "Pause slides",
+      "play": "Play slides"
+    }
+  },
+  "rates": {
+    "title": "Today’s Rate",
+    "gold24": "Gold 24K (999)",
+    "gold22": "Gold 22K",
+    "gold18": "Gold 18K",
+    "silver": "Silver",
+    "perGram": "per gram",
+    "perKg": "per kg",
+    "sample": "Sample rates",
+    "updated": "Last updated: {time}",
+    "unavailable": "Today’s rate has not been updated yet. Please call us for the current rate.",
+    "note": "Rates are indicative; final price after purity testing at the branch."
+  },
+  "services": {
+    "eyebrow": "Our services",
+    "title": "How we can help you",
+    "intro": "Three simple services, one transparent process."
+  },
+  "why": {
+    "eyebrow": "Why choose us",
+    "title": "Everything happens in front of you",
+    "items": [
+      {
+        "title": "Purity testing in front of you",
+        "text": "Your gold is tested on a German-technology machine while you watch."
+      },
+      {
+        "title": "Payment in about 5 minutes",
+        "text": "By bank transfer, or in cash within the limits allowed by law."
+      },
+      {
+        "title": "Any karat accepted",
+        "text": "Jewellery, coins and bars of any karat, even old or broken pieces."
+      },
+      {
+        "title": "Transparent weighing",
+        "text": "Your gold is weighed in front of you, and you see the reading yourself."
+      },
+      {
+        "title": "BIS Hallmark and HUID",
+        "text": "Every 24K coin and bar we sell is BIS Hallmark and HUID certified."
+      }
+    ]
+  },
+  "process": {
+    "eyebrow": "How it works",
+    "title": "Six simple steps",
+    "intro": "From walking in to getting paid, you see every step.",
+    "steps": [
+      {
+        "title": "Visit our branch",
+        "text": "Come to our Dange Chowk branch with your gold.",
+        "detail": "Come to our branch at VTP Altitude, Dange Chowk, with the gold or silver you want to sell. You can call or WhatsApp us first if you have any questions."
+      },
+      {
+        "title": "KYC",
+        "text": "Show a valid identity proof.",
+        "detail": "Show a valid government photo identity proof. This is required for every transaction and keeps the process safe for everyone."
+      },
+      {
+        "title": "Purity test",
+        "text": "Tested on our machine in front of you.",
+        "detail": "Your gold is tested on a German-technology machine in front of you, so you can see the purity result yourself."
+      },
+      {
+        "title": "Weighing",
+        "text": "Weighed in front of you.",
+        "detail": "The gold is weighed in front of you and you see the reading on the scale."
+      },
+      {
+        "title": "Price",
+        "text": "Calculated at today’s rate.",
+        "detail": "We calculate the price from the weight, the purity and the day’s rate, and explain the calculation to you. You decide whether to sell."
+      },
+      {
+        "title": "Instant payment",
+        "text": "Paid in about 5 minutes.",
+        "detail": "Once you accept the price, you are paid in about 5 minutes by bank transfer, or in cash within the limits allowed by law."
+      }
+    ]
+  },
+  "estimator": {
+    "eyebrow": "Estimator",
+    "title": "Estimate the value of your old gold",
+    "intro": "Enter the weight and karat to see an approximate value at today’s rate.",
+    "weight": "Weight in grams",
+    "weightPlaceholder": "For example 10",
+    "karat": "Karat",
+    "karatOption": "{karat} karat",
+    "karatOther": "Other (enter purity %)",
+    "purity": "Purity in percent",
+    "purityPlaceholder": "For example 80",
+    "result": "Estimated value",
+    "resultEmpty": "Enter the weight",
+    "rateUnavailable": "Please call us for today’s rate",
+    "basedOn": "Based on today’s 24K rate of {rate} per gram",
+    "disclaimer": "This is only an estimate. The final price is decided after purity testing at our branch."
+  },
+  "offer": {
+    "badge": "Saturday offer",
+    "terms": "Offer subject to change. Please confirm with our team before you visit.",
+    "cta": "Buy 24K gold"
+  },
+  "testimonials": {
+    "eyebrow": "Customer reviews",
+    "title": "What our customers say",
+    "rating": "{rating} out of 5 stars"
+  },
+  "videos": {
+    "advertsEyebrow": "Advertisements",
+    "advertsTitle": "See how we work",
+    "feedbackEyebrow": "Customer feedback",
+    "feedbackTitle": "Hear it from our customers",
+    "advertsEmpty": "Our videos will be added here soon.",
+    "feedbackEmpty": "Customer feedback videos will be added here soon."
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": "Common questions",
+    "viewAll": "View all questions",
+    "crumb": "FAQ",
+    "pageTitle": "Frequently asked questions",
+    "pageIntro": "Clear answers about selling gold, pledged gold and buying 24K gold. If your question is not here, please call us.",
+    "categories": {
+      "selling": "Selling gold and silver",
+      "pledged": "Pledged gold",
+      "buying": "Buying 24K gold",
+      "general": "General"
+    },
+    "categoriesLabel": "Question categories",
+    "highlights": ["Clear, simple answers", "In Marathi and English", "Call or WhatsApp for more"],
+    "heroSlides": {
+      "selling": "What we buy, how the price is worked out, and how and when you are paid.",
+      "pledged": "How we help release gold pledged with a bank, NBFC or pawn broker, and what to bring.",
+      "buying": "About our 24K coins and bars, their hallmark, the weights and how to register."
+    },
+    "readAnswers": "Read the answers",
+    "questionsCount": "{count, plural, one {# question} other {# questions}}"
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Visit us or get in touch",
+    "intro": "Call or WhatsApp us, or visit our branch.",
+    "address": "Address",
+    "phones": "Phone",
+    "hours": "Opening hours",
+    "mapTitle": "Map showing the location of Suvarnavarsha Gold",
+    "crumb": "Contact",
+    "pageTitle": "Contact us",
+    "pageIntro": "We are at VTP Altitude, Dange Chowk, Pune. Call or WhatsApp us and our team will help you.",
+    "channels": {
+      "call": {
+        "title": "Call us",
+        "text": "Talk to our team for today’s rate and to plan your visit."
+      },
+      "whatsapp": {
+        "title": "WhatsApp",
+        "text": "Send us a message with your question."
+      },
+      "visit": {
+        "title": "Visit the branch"
+      }
+    },
+    "visitTitle": "Before you visit",
+    "visitItems": [
+      "Carry a valid government photo identity proof",
+      "Call us for the day’s rate and timings",
+      "To buy 24K gold, register in advance. Registration is free"
+    ],
+    "mapHeading": "Find us at Dange Chowk, Pune",
+    "highlights": ["Dange Chowk, Pune", "Call or WhatsApp", "Registration for 24K gold is free"],
+    "whatsappTopics": ["Today’s rate", "Documents to bring", "Registering for 24K gold"],
+    "helpTitle": "How can we help?",
+    "helpText": "Read about each service before you call or visit."
+  },
+  "enquiry": {
+    "title": "Request a call back",
+    "intro": "Share your details and our team will call you.",
+    "name": "Your name",
+    "mobile": "Mobile number",
+    "mobilePlaceholder": "10-digit mobile number",
+    "service": "Service",
+    "preferredTime": "Preferred time to call",
+    "message": "Message (optional)",
+    "consent": "I agree that Suvarnavarsha Gold may contact me about this enquiry, as described in the <link>Privacy Policy</link>.",
+    "submit": "Send enquiry",
+    "sending": "Sending…",
+    "successTitle": "Thank you. We have received your enquiry.",
+    "successText": "Our team will call you soon. For a quicker reply, call or WhatsApp us.",
+    "sendAnother": "Send another enquiry",
+    "rateLimited": "You have sent several enquiries. Please try again after some time, or call us.",
+    "serverError": "Sorry, we could not send your enquiry. Please call or WhatsApp us.",
+    "services": {
+      "sell_gold": "Sell old gold",
+      "sell_silver": "Sell old silver",
+      "release_pledged": "Release pledged gold",
+      "buy_gold": "Buy 24K gold",
+      "other": "Other"
+    },
+    "times": {
+      "anytime": "Any time",
+      "morning": "Morning",
+      "afternoon": "Afternoon",
+      "evening": "Evening"
+    },
+    "errors": {
+      "name": "Please enter your name (2 to 100 characters).",
+      "mobile": "Please enter a valid 10-digit mobile number.",
+      "service": "Please choose a service.",
+      "preferredTime": "Please choose a time.",
+      "message": "The message can be up to 1000 characters.",
+      "consent": "Please tick this box so that we can contact you."
+    }
+  },
+  "cta": {
+    "title": "Have a question? Talk to us",
+    "text": "Call or WhatsApp us for today’s rate and to plan your visit."
+  },
+  "sell": {
+    "crumb": "Sell Gold",
+    "eyebrow": "Sell old gold and silver",
+    "title": "Sell your old gold and silver at a fair, transparent price",
+    "intro": "Bring your gold or silver to our branch. We test and weigh it in front of you and pay as per the day’s rate.",
+    "whatTitle": "What we buy",
+    "whatIntro": "We buy gold of any karat, and silver too.",
+    "whatItems": [
+      {
+        "title": "Gold jewellery",
+        "text": "Chains, bangles, rings, necklaces and other jewellery of any karat."
+      },
+      {
+        "title": "Coins and bars",
+        "text": "Gold coins, bars and biscuits of any weight."
+      },
+      {
+        "title": "Old or broken pieces",
+        "text": "Old, broken or damaged gold items are accepted."
+      },
+      {
+        "title": "Silver",
+        "text": "Old silver articles and jewellery."
+      }
+    ],
+    "docsTitle": "Documents you need",
+    "docsItems": [
+      "A valid government photo identity proof, such as your Aadhaar card",
+      "PAN card for higher-value transactions, where the law requires it",
+      "The purchase bill, if you have it. It is not mandatory"
+    ],
+    "docsNote": "Please call us before your visit and we will confirm the documents for your transaction.",
+    "priceTitle": "How the price is calculated",
+    "priceFormula": "Weight × Purity × Today’s rate",
+    "priceText": "We weigh your gold and test its purity in front of you. The value is then calculated using the day’s rate, and we explain the calculation before you decide.",
+    "paymentTitle": "Payment",
+    "paymentItems": [
+      "Bank transfer in about 5 minutes after you accept the price",
+      "Cash payment within the limits allowed by law"
+    ],
+    "faqTitle": "Questions about selling gold",
+    "highlights": [
+      "Purity tested in front of you",
+      "Payment in about 5 minutes",
+      "Gold of any karat accepted"
+    ],
+    "heroSlides": [
+      {
+        "title": "Gold jewellery of any karat",
+        "text": "Chains, bangles, rings, necklaces, earrings and mangalsutras: 24K, 22K, 18K or any other karat. We test the purity with a German-technology machine in front of you and weigh it on a scale you can see.",
+        "points": [
+          "Any karat accepted",
+          "Purity tested in front of you",
+          "Payment in about 5 minutes"
+        ]
+      },
+      {
+        "title": "Old, broken or damaged gold",
+        "text": "A broken chain, a single earring, a bent bangle or old pieces you no longer wear: bring them as they are. The price is worked out from the weight, the purity and today’s rate, and we explain the calculation to you.",
+        "points": [
+          "Broken pieces accepted",
+          "Weight × Purity × Today’s rate",
+          "Bank transfer or cash within legal limits"
+        ]
+      }
+    ]
+  },
+  "pledged": {
+    "crumb": "Release Pledged Gold",
+    "eyebrow": "Gold loan closing",
+    "title": "Release your pledged gold and close your gold loan",
+    "intro": "If your gold is pledged with a lender and you want to sell it, we help you close the loan and release the gold.",
+    "highlights": [
+      "Loan closed with your lender",
+      "Gold tested in front of you",
+      "Balance paid to you"
+    ],
+    "heroSlides": [
+      {
+        "title": "Gold pledged with a bank, NBFC or pawn broker",
+        "text": "Have a gold loan you want to close? Bring your loan statement and identity proof. We check the outstanding amount with you and explain every step before anything is done.",
+        "points": ["Banks", "NBFCs and gold loan companies", "Local pawn brokers"]
+      },
+      {
+        "title": "We pay the lender, you receive the balance",
+        "text": "We pay the outstanding amount to the lender so your gold is released. It is then tested and weighed in front of you, valued at the day’s rate, and the balance is paid to you.",
+        "points": [
+          "Purity tested in front of you",
+          "Valued at the day’s rate",
+          "Full calculation explained"
+        ]
+      }
+    ],
+    "whoTitle": "Who this is for",
+    "whoItems": [
+      {
+        "title": "Gold pledged with a bank",
+        "text": "You have a gold loan with a bank and want to close it."
+      },
+      {
+        "title": "Gold loan from an NBFC",
+        "text": "Your gold is with a gold loan company or finance company."
+      },
+      {
+        "title": "Gold with a pawn broker",
+        "text": "Your jewellery is pledged with a local pawn broker."
+      }
+    ],
+    "stepsTitle": "How it works",
+    "steps": [
+      {
+        "title": "Share your loan details",
+        "text": "Bring your loan statement and identity proof. We check the outstanding amount with you."
+      },
+      {
+        "title": "We pay the lender",
+        "text": "We pay the outstanding amount to the lender so that your gold is released."
+      },
+      {
+        "title": "Gold is tested and weighed",
+        "text": "The released gold is tested for purity and weighed in front of you."
+      },
+      {
+        "title": "You receive the balance",
+        "text": "The value is calculated at the day’s rate and the balance amount is paid to you."
+      }
+    ],
+    "docsTitle": "Documents you need",
+    "docsItems": [
+      "Gold loan statement or pledge receipt from the lender",
+      "A valid government photo identity proof",
+      "PAN card, where the law requires it"
+    ],
+    "noteTitle": "Good to know",
+    "noteText": "The amount you receive depends on the weight and purity of your gold, the day’s rate and your outstanding loan. We explain the full calculation before you decide.",
+    "faqTitle": "Questions about pledged gold"
+  },
+  "buy": {
+    "crumb": "Buy 24K Gold",
+    "eyebrow": "24K gold coins and bars",
+    "title": "Buy 24K gold coins and bars",
+    "intro": "Certified 24 karat gold from 0.5 g to 100 g, with BIS Hallmark and HUID.",
+    "highlights": ["24 karat gold", "BIS Hallmark and HUID", "0.5 g to 100 g"],
+    "heroSlides": [
+      {
+        "title": "Coins, bars and biscuits from 0.5 g to 100 g",
+        "text": "Choose 24K gold coins, bars or biscuits in the weight that suits your budget, from 0.5 g up to 100 g. Ask us which weights are in stock before you visit.",
+        "points": ["Coins from 0.5 g", "Bars up to 100 g", "Biscuits in a range of weights"]
+      },
+      {
+        "title": "BIS Hallmark and HUID on every piece",
+        "text": "Every 24K coin and bar we sell is BIS Hallmark and HUID certified, and you can get its purity tested on any machine. Stock is limited, so please register before you visit; registration is free.",
+        "points": [
+          "BIS Hallmark and HUID",
+          "Purity can be tested anywhere",
+          "Free prior registration"
+        ]
+      }
+    ],
+    "productsTitle": "What you can buy",
+    "products": [
+      {
+        "title": "Gold coins",
+        "text": "24K gold coins, starting from 0.5 g."
+      },
+      {
+        "title": "Gold bars",
+        "text": "24K gold bars, up to 100 g."
+      },
+      {
+        "title": "Gold biscuits",
+        "text": "24K gold biscuits in a range of weights."
+      }
+    ],
+    "featuresTitle": "Why buy from us",
+    "features": [
+      {
+        "title": "BIS Hallmark and HUID",
+        "text": "Every coin and bar is BIS Hallmark and HUID certified."
+      },
+      {
+        "title": "Check the purity anywhere",
+        "text": "You can get the purity tested on any testing machine."
+      },
+      {
+        "title": "0.5 g to 100 g",
+        "text": "Choose the weight that suits your budget."
+      }
+    ],
+    "registerTitle": "Register before you visit",
+    "registerText": "Stock is limited, so prior registration is required. Registration is free. Call or WhatsApp us to register.",
+    "buybackTitle": "Buyback",
+    "buybackPlaceholder": "[CLIENT TO PROVIDE: written buyback terms — which products, which rate, any deduction]",
+    "faqTitle": "Questions about buying gold"
+  },
+  "how": {
+    "crumb": "How It Works",
+    "eyebrow": "How it works and KYC",
+    "title": "A simple, transparent process",
+    "intro": "Here is what happens when you bring your gold to us, and what you need to carry.",
+    "kycTitle": "KYC documents",
+    "kycIntro": "Identity proof is required for every transaction.",
+    "kycItems": [
+      "A valid government photo identity proof, such as your Aadhaar card",
+      "PAN card for higher-value transactions, where the law requires it",
+      "The purchase bill is not mandatory, but identity proof is"
+    ],
+    "kycNote": "Please call us before your visit and we will confirm the documents for your transaction.",
+    "rulesTitle": "Things to remember",
+    "rulesItems": [
+      "Stolen or fake gold is not accepted, and such cases are reported to the authorities",
+      "Persons below 18 years of age cannot sell gold",
+      "Rates on this website are indicative; the final price is decided after testing at the branch"
+    ],
+    "highlights": [
+      "Purity tested in front of you",
+      "Weighed in front of you",
+      "Paid in about 5 minutes"
+    ],
+    "heroSlides": [
+      {
+        "title": "Purity tested in front of you",
+        "text": "Your gold is tested on a German-technology machine while you watch, so you see the purity result yourself.",
+        "points": ["German-technology machine", "Any karat accepted", "You see the result"]
+      },
+      {
+        "title": "Weighed and priced openly",
+        "text": "The gold is weighed in front of you, and the price is worked out from the weight, the purity and today’s rate. You decide whether to sell.",
+        "points": ["Reading shown on the scale", "Today’s rate", "The calculation explained"]
+      },
+      {
+        "title": "Paid in about 5 minutes",
+        "text": "Once you accept the price, you are paid by bank transfer, or in cash within the limits allowed by law.",
+        "points": ["Bank transfer", "Cash within legal limits", "Identity proof required"]
+      }
+    ],
+    "step": "Step {n}",
+    "docsEyebrow": "Before you visit",
+    "docsHeading": "What to bring, and what to know",
+    "faqTitle": "Questions about the process"
+  },
+  "about": {
+    "crumb": "About",
+    "eyebrow": "About us",
+    "title": "Suvarnavarsha Gold Ventures Pvt. Ltd.",
+    "intro": "A Pune company for buying and selling gold with a fair rate and a transparent process.",
+    "storyTitle": "Who we are",
+    "story": [
+      "Suvarnavarsha Gold Ventures Pvt. Ltd. is based at Dange Chowk, Pune. We buy old gold and silver, help customers release gold pledged with banks and other lenders, and sell 24K gold coins and bars.",
+      "Selling family gold is an important decision. That is why testing, weighing and pricing all happen in front of you, and we explain every step before you decide."
+    ],
+    "valuesTitle": "What we stand for",
+    "values": [
+      {
+        "title": "Transparency",
+        "text": "Purity testing and weighing are done in front of you, and the calculation is explained clearly."
+      },
+      {
+        "title": "Fair rate",
+        "text": "The price is based on the weight, the purity and the day’s rate."
+      },
+      {
+        "title": "Respect",
+        "text": "Every customer is treated with respect and never pressured to sell."
+      }
+    ],
+    "contactTitle": "Contact person",
+    "contactName": "Ranjit Jadhav"
+  },
+  "legal": {
+    "draft": "Draft for review. This page must be approved by the client and their CA or lawyer before launch.",
+    "updated": "Last updated: October 2026",
+    "eyebrow": "Legal",
+    "toc": "On this page",
+    "sectionLabel": "Section {n}",
+    "glance": "At a glance",
+    "alsoRead": "Also read"
+  },
+  "privacy": {
+    "crumb": "Privacy Policy",
+    "title": "Privacy Policy",
+    "intro": "This policy explains what information Suvarnavarsha Gold Ventures Pvt. Ltd. collects through this website and how it is used, in line with India’s Digital Personal Data Protection Act, 2023.",
+    "sections": [
+      {
+        "title": "Information we collect",
+        "body": [
+          "When you send an enquiry we collect your name, mobile number, the service you are interested in, your preferred time for a call and any message you write.",
+          "To prevent misuse of the form we store a one-way encrypted (hashed) form of your IP address. We do not store the IP address itself.",
+          "If analytics is enabled, we collect anonymous usage information such as pages visited and clicks on the Call and WhatsApp buttons."
+        ]
+      },
+      {
+        "title": "Why we collect it",
+        "body": [
+          "We use your details only to contact you about your enquiry and to provide the service you asked for.",
+          "We do not sell your information, and we do not use it for unrelated marketing."
+        ]
+      },
+      {
+        "title": "Who can see it",
+        "body": [
+          "Your enquiry is visible only to authorised staff of Suvarnavarsha Gold. It is stored with our website hosting and email service providers, who process it on our behalf."
+        ]
+      },
+      {
+        "title": "How long we keep it",
+        "body": [
+          "We keep enquiry details only for as long as needed to respond to you and to meet our legal obligations, after which they are deleted."
+        ]
+      },
+      {
+        "title": "Your choices",
+        "body": [
+          "You can ask us to correct or delete the information you have shared through this website. Call or WhatsApp us on +91 91567 81981 and we will act on your request."
+        ]
+      },
+      {
+        "title": "Contact",
+        "body": [
+          "Suvarnavarsha Gold Ventures Pvt. Ltd., Second Floor – 239, VTP Altitude, Near Shell Petrol Pump, Dange Chowk, Pune – 411033, Maharashtra. Phone: +91 91567 81981."
+        ]
+      }
+    ],
+    "glance": [
+      {
+        "title": "Only what you share",
+        "text": "Your name, mobile number and the details you choose to give us."
+      },
+      {
+        "title": "Never sold",
+        "text": "Used only to reply to you, never for unrelated marketing."
+      },
+      {
+        "title": "Seen by our staff only",
+        "text": "Only authorised Suvarnavarsha Gold staff can see your details."
+      },
+      {
+        "title": "Correct or delete",
+        "text": "Call or WhatsApp us and we will act on your request."
+      }
+    ]
+  },
+  "terms": {
+    "crumb": "Terms & Disclaimer",
+    "title": "Terms & Disclaimer",
+    "intro": "Please read these terms before using this website.",
+    "sections": [
+      {
+        "title": "Rates are indicative",
+        "body": [
+          "Gold and silver rates shown on this website are indicative and are updated by our team. They can change during the day.",
+          "The final price of any transaction is decided at our branch after purity testing and weighing."
+        ]
+      },
+      {
+        "title": "Offers",
+        "body": [
+          "Offers shown on this website are subject to change or withdrawal. Please confirm the current offer with our team before your visit."
+        ]
+      },
+      {
+        "title": "No investment products",
+        "body": [
+          "Suvarnavarsha Gold does not offer any investment, deposit or savings scheme through this website. We buy old gold and silver, help release pledged gold and sell 24K gold coins and bars."
+        ]
+      },
+      {
+        "title": "KYC and lawful transactions",
+        "body": [
+          "Identity proof is required for every transaction. Stolen or fake gold is not accepted, and such cases are reported to the authorities. Persons below 18 years of age cannot sell gold."
+        ]
+      },
+      {
+        "title": "Website information",
+        "body": [
+          "We try to keep the information on this website accurate and up to date. If anything is unclear, please call us and confirm before you visit."
+        ]
+      }
+    ],
+    "glance": [
+      {
+        "title": "Rates are indicative",
+        "text": "Rates on this website can change during the day."
+      },
+      {
+        "title": "Price after testing",
+        "text": "The final price is decided at our branch after testing and weighing."
+      },
+      {
+        "title": "No investment schemes",
+        "text": "We offer no investment, deposit or savings scheme."
+      },
+      {
+        "title": "ID for every transaction",
+        "text": "Stolen or fake gold is not accepted and is reported."
+      }
+    ]
+  },
+  "home2": {
+    "aboutCta": "More about us"
+  },
+  "home3": {
+    "factsLabel": "Suvarnavarsha Gold at a glance",
+    "facts": [
+      {
+        "value": "24K",
+        "label": "Gold coins and bars"
+      },
+      {
+        "value": "5 min",
+        "label": "Approximate payment time"
+      },
+      {
+        "value": "0.5–100 g",
+        "label": "Coin and bar weights"
+      },
+      {
+        "value": "6",
+        "label": "Simple steps"
+      }
+    ]
+  },
+  "servicesPage": {
+    "crumb": "Services",
+    "eyebrow": "Our services",
+    "title": "Gold services in Pune, with everything done in front of you",
+    "intro": "Sell old gold and silver, release pledged gold or buy 24K gold. Choose a service to see how it works.",
+    "highlights": {
+      "sell-gold": [
+        "Gold of any karat, and silver too",
+        "Purity tested and weighed in front of you",
+        "Payment in about 5 minutes by bank transfer, or in cash within legal limits"
+      ],
+      "release-pledged-gold": [
+        "Gold pledged with a bank, NBFC or pawn broker",
+        "We pay the lender so that your gold is released",
+        "The full calculation is explained before you decide"
+      ],
+      "buy-gold": [
+        "24K coins, bars and biscuits from 0.5 g to 100 g",
+        "BIS Hallmark and HUID certified",
+        "Free prior registration, as stock is limited"
+      ]
+    }
+  },
+  "store": {
+    "crumb": "Online Store",
+    "eyebrow": "Online store",
+    "title": "Choose your 24K gold online, collect at our branch",
+    "intro": "Pick a product and book it with one WhatsApp message. We confirm today’s price and availability, and you collect and pay at the branch.",
+    "highlights": [
+      "24K gold, BIS Hallmark and HUID",
+      "Book with one WhatsApp message",
+      "Collect and pay at the branch"
+    ],
+    "trustLabel": "Why buy from us",
+    "trust": ["24K (999) gold", "BIS Hallmark and HUID", "0.5 g to 100 g", "Free registration"],
+    "productsTitle": "Our products",
+    "productsIntro": "24K coins, bars and biscuits, BIS Hallmark and HUID certified.",
+    "sample": "Sample",
+    "category": "Category",
+    "code": "Product code",
+    "weight": "Weight",
+    "price": "Price",
+    "weightValue": "{weight} g",
+    "categories": {
+      "coin": "Gold coin",
+      "bar": "Gold bar",
+      "biscuit": "Gold biscuit"
+    },
+    "book": "Book now",
+    "dialogIntro": "Check the details and send them to us on WhatsApp. Our team will reply to confirm.",
+    "priceNote": "The final price follows the day’s rate and is confirmed by our team.",
+    "sendWhatsapp": "Send on WhatsApp",
+    "close": "Close",
+    "whatsappMessage": "Hello, I want to book this product. Can we talk?\n\nProduct: {name}\nCategory: {category}\nProduct code: {code}\nWeight: {weight}\nPrice: {price}",
+    "stepsTitle": "How to order",
+    "steps": [
+      {
+        "title": "1. Choose a product",
+        "text": "Pick the product that suits your budget and tap Book now."
+      },
+      {
+        "title": "2. Send the WhatsApp message",
+        "text": "The product details are already written. We reply with today’s price and register your name. Registration is free."
+      },
+      {
+        "title": "3. Collect at the branch",
+        "text": "Visit our Dange Chowk branch, check the hallmark and HUID, pay and take your gold."
+      }
+    ],
+    "moreLink": "More about our 24K gold"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "text": "The page you are looking for may have moved or does not exist.",
+    "home": "Go to the home page"
+  }
+}

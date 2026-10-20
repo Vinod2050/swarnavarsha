@@ -1,0 +1,973 @@
+@import 'tailwindcss';
+
+/* ------------------------------------------------------------------ */
+/* Design tokens — CLAUDE.md Section 6.1. Do not introduce new colours */
+/* ------------------------------------------------------------------ */
+:root {
+  /* brand scales */
+  --gold-50: #fff9e8; /* ivory page ground */
+  --gold-100: #fbf1c7; /* pale gold band */
+  --gold-200: #fbeea0; /* foil highlight */
+  --gold-300: #f3df63; /* LOGO FOIL GOLD - brand colour */
+  --gold-400: #e2c943; /* foil mid-tone, hover */
+  --gold-500: #c2a52e; /* foil shadow, pressed */
+  --gold-800: #7a5f0e; /* antique gold: the only gold allowed as text on ivory/white */
+
+  --plum-950: #1a1417; /* footer, photo overlays */
+  --plum-900: #211a1d; /* dark sunken */
+  --plum-800: #2e2327; /* BUSINESS CARD COLOUR - brand dark */
+  --plum-700: #3a2b30; /* dark raised */
+  --plum-600: #4a363c; /* dark hairlines, hover */
+  --plum-400: #8c7177; /* input borders */
+
+  --peacock-green: #128049; /* WhatsApp, success */
+  --peacock-blue: #2f62d8; /* links on ivory */
+  --peacock-pink: #b8246c; /* offer badges */
+  --peacock-purple: #4a2f9c; /* rare highlight */
+
+  /* semantic - LIGHT (ivory) sections, the default */
+  --surface: #fff9e8;
+  --surface-raised: #ffffff;
+  --surface-sunken: #fbf1c7;
+  --ink: #1e1719;
+  --ink-muted: #6b5a5f;
+  --accent: #7a5f0e;
+  --cta: #2e2327;
+  --on-cta: #f3df63;
+  --line: #e8dcc0;
+  --line-strong: #8c7177;
+  --danger: #c62828;
+  /* focus ring: antique gold on ivory, foil gold on plum (3:1 against the surface) */
+  --focus: #7a5f0e;
+}
+
+/* semantic - DARK (plum) sections: add class="theme-dark" to the section */
+.theme-dark {
+  --surface: #2e2327;
+  --surface-raised: #3a2b30;
+  --surface-sunken: #211a1d;
+  --ink: #f5ede0;
+  --ink-muted: #bfafb3;
+  --accent: #f3df63;
+  --cta: #f3df63;
+  --on-cta: #2e2327;
+  --line: #4a363c;
+  --line-strong: #8c7177;
+  --danger: #ff8a80;
+  --focus: #e2c943;
+}
+
+/*
+ * Emerald sections (Home 1 design): peacock-feather green from the logo, with the same ivory
+ * text and foil gold accents as plum. Added at Finixsoft's request on 2026-10-09; these four
+ * greens are the only colours outside CLAUDE.md Section 6.1.
+ */
+.theme-dark.theme-emerald {
+  --surface: #0f3d2f;
+  --surface-raised: #16503e;
+  --surface-sunken: #0b2e24;
+  --ink-muted: #b9cbc2;
+  --line: #1f6650;
+  --line-strong: #5f9483;
+}
+
+/* Back to the ivory tokens for a light card placed inside a dark section */
+.theme-light {
+  --surface: #fff9e8;
+  --surface-raised: #ffffff;
+  --surface-sunken: #fbf1c7;
+  --ink: #1e1719;
+  --ink-muted: #6b5a5f;
+  --accent: #7a5f0e;
+  --cta: #2e2327;
+  --on-cta: #f3df63;
+  --line: #e8dcc0;
+  --line-strong: #8c7177;
+  --danger: #c62828;
+  --focus: #7a5f0e;
+}
+
+/* The deepest plum, used by the top bar and footer */
+.theme-dark.theme-deep {
+  --surface: #1a1417;
+  --surface-raised: #211a1d;
+}
+
+@theme inline {
+  --color-surface: var(--surface);
+  --color-surface-raised: var(--surface-raised);
+  --color-surface-sunken: var(--surface-sunken);
+  --color-ink: var(--ink);
+  --color-ink-muted: var(--ink-muted);
+  --color-accent: var(--accent);
+  --color-cta: var(--cta);
+  --color-on-cta: var(--on-cta);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-danger: var(--danger);
+  --color-focus: var(--focus);
+
+  --color-gold-50: #fff9e8;
+  --color-gold-100: #fbf1c7;
+  --color-gold-200: #fbeea0;
+  --color-gold-300: #f3df63;
+  --color-gold-400: #e2c943;
+  --color-gold-500: #c2a52e;
+  --color-gold-800: #7a5f0e;
+  --color-plum-400: #8c7177;
+  --color-plum-600: #4a363c;
+  --color-plum-700: #3a2b30;
+  --color-plum-800: #2e2327;
+  --color-plum-900: #211a1d;
+  --color-plum-950: #1a1417;
+  --color-peacock-green: #128049;
+  --color-peacock-blue: #2f62d8;
+  --color-peacock-pink: #b8246c;
+  --color-peacock-purple: #4a2f9c;
+
+  --font-display: var(--font-playfair), var(--font-tiro), Georgia, serif;
+  --font-sans: var(--font-mukta), 'Noto Sans Devanagari', system-ui, sans-serif;
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --shadow-card: 0 6px 24px rgba(46, 35, 39, 0.12);
+  --shadow-foil: 2px 4px 6px rgba(20, 12, 16, 0.45);
+}
+
+/* ------------------------------------------------------------------ */
+/* Base                                                                */
+/* ------------------------------------------------------------------ */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--surface);
+    color: var(--ink);
+    font-family: var(--font-mukta), 'Noto Sans Devanagari', system-ui, sans-serif;
+    font-size: 16px;
+    line-height: 26px;
+    -webkit-font-smoothing: antialiased;
+    /* One long word typed in /admin (an email, a link) wraps instead of widening the page */
+    overflow-wrap: break-word;
+  }
+
+  /* Media never grows wider than the box it sits in */
+  img,
+  video,
+  iframe {
+    max-width: 100%;
+  }
+
+  /* Blocks sliding in from the side must not widen the page. `clip` keeps sticky children working. */
+  main {
+    overflow-x: clip;
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--focus);
+    outline-offset: 2px;
+  }
+
+  ::selection {
+    background-color: var(--gold-300);
+    color: var(--plum-800);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/* Typography — Section 6.4                                            */
+/* Headings grow smoothly from the mobile size to the desktop size, so */
+/* no screen width in between gets a size that is too big or too small */
+/* ------------------------------------------------------------------ */
+@utility t-hero {
+  font-family: var(--font-playfair), var(--font-tiro), Georgia, serif;
+  /* The 7.3vh cap keeps the headline inside the first screen on short laptop displays */
+  font-size: clamp(34px, min(20px + 3.2vw, 7.3vh), 56px);
+  line-height: 1.12;
+  font-weight: 700;
+  text-wrap: balance;
+}
+
+@utility t-h1 {
+  font-family: var(--font-playfair), var(--font-tiro), Georgia, serif;
+  font-size: clamp(30px, 24px + 1.6vw, 40px);
+  line-height: 1.22;
+  font-weight: 700;
+  text-wrap: balance;
+}
+
+@utility t-h2 {
+  font-family: var(--font-playfair), var(--font-tiro), Georgia, serif;
+  font-size: clamp(26px, 22px + 1vw, 32px);
+  line-height: 1.28;
+  font-weight: 600;
+  text-wrap: balance;
+}
+
+@utility t-h3 {
+  font-family: var(--font-playfair), var(--font-tiro), Georgia, serif;
+  font-size: clamp(20px, 17px + 0.7vw, 24px);
+  line-height: 1.36;
+  font-weight: 600;
+}
+
+@utility t-body-lg {
+  font-size: 17px;
+  line-height: 28px;
+  @media (width >= 48rem) {
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
+
+@utility t-label {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+}
+
+@utility t-eyebrow {
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 600;
+  color: var(--accent);
+  &:lang(en) {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+}
+
+@utility t-rate {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  @media (width >= 48rem) {
+    font-size: 28px;
+    line-height: 34px;
+  }
+}
+
+/*
+ * Marathi headings: Tiro Devanagari Marathi ships in one weight (400). Put it first so
+ * Devanagari and digits share one face, and never let the browser fake a bold.
+ */
+:lang(mr) :is(.t-hero, .t-h1, .t-h2, .t-h3) {
+  font-family: var(--font-tiro), var(--font-playfair), Georgia, serif;
+  font-weight: 400;
+  font-synthesis: none;
+}
+
+:lang(mr) .t-hero {
+  line-height: 1.3;
+}
+
+/* ------------------------------------------------------------------ */
+/* Layout helpers                                                      */
+/* ------------------------------------------------------------------ */
+/* Very large monitors (2K/4K at 100% scaling): enlarge the whole page so it does not look tiny */
+@media (width >= 140rem) {
+  html {
+    /* Keep in step with --page-zoom below */
+    zoom: 1.25;
+  }
+}
+
+/* Laptop screens that are wide but not tall, e.g. 1366×768 or a scaled 1920×1080 */
+@custom-variant short (@media (height < 50rem));
+/* The same laptops with the browser zoomed in, which leaves under 560px of height */
+@custom-variant xshort (@media (height < 35rem));
+
+/*
+ * Height of the top bar + sticky header above the page (TopBar min-h-11 = 44px, Header h-18 /
+ * md:h-24 / md:short:h-18 / md:xshort:h-16, plus its 1px border).
+ * Keep in step with those two components. PageHero fills the rest of the first screen with
+ * `min-h-first-screen`, and `min-h-screen-section` gives a section one screen under the header.
+ */
+:root {
+  --site-topbar: 44px;
+  --site-header: 73px;
+  --page-zoom: 1;
+}
+@media (width >= 48rem) {
+  :root {
+    --site-header: 97px;
+  }
+}
+@media (width >= 48rem) and (height < 50rem) {
+  :root {
+    --site-header: 73px;
+  }
+}
+@media (width >= 48rem) and (height < 35rem) {
+  :root {
+    /* The top bar stays 44px: its language links keep their 44px touch targets */
+    --site-header: 65px;
+  }
+}
+/* The page zoom on very large monitors (above), which the screen heights divide out */
+@media (width >= 140rem) {
+  :root {
+    --page-zoom: 1.25;
+  }
+}
+
+/* Full-screen sections on phones, tablets and laptops (600–1080px tall). Taller monitors
+   keep the sections at their natural height, so they do not open up wide empty bands; so do
+   screens under 600px (phones on their side, the 320×568 phone), where a section's content
+   cannot fit one screen at a readable size */
+:root {
+  --screen-section-min: calc(100svh / var(--page-zoom) - var(--site-header));
+}
+@media (height > 67.5rem) or (height < 37.5rem) {
+  :root {
+    --screen-section-min: 0px;
+  }
+}
+
+/* svh: the screen height left while a phone browser shows its address and bottom toolbars.
+   Divided by the page zoom, because a zoomed page scales 100svh up with everything else */
+@utility min-h-first-screen {
+  min-height: calc(100svh / var(--page-zoom) - var(--site-topbar) - var(--site-header));
+}
+@utility min-h-screen-section {
+  min-height: var(--screen-section-min);
+}
+
+@utility container-site {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 16px;
+  @media (width >= 48rem) {
+    padding-inline: 24px;
+  }
+  /* Large monitors: a wider column, so the page does not look small in the middle */
+  @media (width >= 96rem) {
+    max-width: 1320px;
+  }
+  @media (width >= 112rem) {
+    max-width: 1440px;
+  }
+}
+
+@utility section-y {
+  /* The 9vh cap keeps sections from eating a whole short laptop screen in padding */
+  padding-block: clamp(32px, min(28px + 5.5vw, 9vh), 80px);
+}
+
+/* Body copy stays at a comfortable 60–75 characters per line */
+@utility measure {
+  max-width: 68ch;
+}
+
+/* ------------------------------------------------------------------ */
+/* Foil gradient — plum sections only (Section 6.3)                    */
+/* ------------------------------------------------------------------ */
+.foil-text {
+  background: linear-gradient(
+    135deg,
+    var(--gold-200) 0%,
+    var(--gold-300) 30%,
+    var(--gold-400) 55%,
+    var(--gold-500) 75%,
+    var(--gold-300) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: none;
+}
+
+.foil-emboss {
+  filter: drop-shadow(2px 4px 6px rgba(20, 12, 16, 0.45));
+}
+
+/* Thin foil rule used as a section ornament on plum */
+.foil-rule {
+  height: 2px;
+  width: 64px;
+  background: linear-gradient(
+    135deg,
+    var(--gold-200) 0%,
+    var(--gold-300) 30%,
+    var(--gold-400) 55%,
+    var(--gold-500) 75%,
+    var(--gold-300) 100%
+  );
+}
+
+/* Full-width foil edge along the top of a plum card */
+.foil-edge {
+  height: 3px;
+  background: linear-gradient(
+    135deg,
+    var(--gold-200) 0%,
+    var(--gold-300) 30%,
+    var(--gold-400) 55%,
+    var(--gold-500) 75%,
+    var(--gold-300) 100%
+  );
+}
+
+/* ------------------------------------------------------------------ */
+/* Accordion height animation (Radix)                               */
+/* ------------------------------------------------------------------ */
+@keyframes accordion-down {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+  }
+}
+
+@keyframes accordion-up {
+  from {
+    height: var(--radix-accordion-content-height);
+  }
+  to {
+    height: 0;
+  }
+}
+
+/* Menu drawer: slides in from the right edge and back out again */
+@keyframes sheet-in {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: none;
+  }
+}
+
+@keyframes sheet-out {
+  from {
+    transform: none;
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes overlay-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes dialog-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/*
+ * Home page motion. Entrances run once and hold their end state; the base layer's
+ * reduced-motion rule cuts every one of them to an instant, single run.
+ */
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Hero slide text moves like a marquee: in from the left edge, out through the right */
+@keyframes marquee-in {
+  from {
+    opacity: 0;
+    transform: translateX(-60vw);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes marquee-out {
+  from {
+    opacity: 1;
+    transform: none;
+  }
+  to {
+    opacity: 0;
+    transform: translateX(60vw);
+  }
+}
+
+/* Hero slide photo (PageHeroSlides `photoMotion="slide"`): in from the right edge a beat after
+   the text starts, and back out to the right, so the two never cross */
+@keyframes hero-photo-in {
+  from {
+    opacity: 0;
+    translate: 50vw 0;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+@keyframes hero-photo-out {
+  from {
+    opacity: 1;
+    translate: 0 0;
+  }
+  to {
+    opacity: 0;
+    translate: 50vw 0;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Slow drift on wide hero photos */
+@keyframes ken-burns {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.08);
+  }
+}
+
+@keyframes float-y {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-8px);
+  }
+}
+
+@theme {
+  --animate-rise: rise-in 800ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  --animate-marquee-in: marquee-in 500ms cubic-bezier(0.25, 0.6, 0.3, 1) both;
+  --animate-marquee-out: marquee-out 400ms cubic-bezier(0.6, 0, 0.8, 0.4) both;
+  --animate-hero-photo-in: hero-photo-in 800ms cubic-bezier(0.25, 0.6, 0.3, 1) 120ms both;
+  --animate-hero-photo-out: hero-photo-out 400ms cubic-bezier(0.6, 0, 0.8, 0.4) both;
+  --animate-fade: fade-in 600ms ease-out both;
+  --animate-kenburns: ken-burns 18s ease-in-out infinite alternate;
+  --animate-float: float-y 3.5s ease-in-out infinite alternate;
+  --animate-accordion-down: accordion-down 200ms ease-out;
+  --animate-accordion-up: accordion-up 200ms ease-out;
+  --animate-sheet-in: sheet-in 320ms cubic-bezier(0.22, 1, 0.36, 1);
+  --animate-sheet-out: sheet-out 220ms ease-in;
+  --animate-overlay-out: overlay-out 220ms ease-in;
+  --animate-dialog-in: dialog-in 200ms ease-out;
+}
+
+/* Hero slider and ornaments: looping motion, all stopped by the reduced-motion rule above */
+@keyframes slide-progress {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes ring-turn {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes twinkle {
+  from {
+    opacity: 0.25;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+
+@keyframes foil-shift {
+  from {
+    background-position: 0% 50%;
+  }
+  to {
+    background-position: 100% 50%;
+  }
+}
+
+/* "Who we are" logo panel on Home (StorySplit). The panel is a size container, so a coin's
+   fall is measured in panel heights (cqh) whatever the panel's size */
+@keyframes coin-fall {
+  0% {
+    translate: 0 0;
+    rotate: y 0deg;
+    opacity: 0;
+  }
+  10%,
+  85% {
+    opacity: 1;
+  }
+  50% {
+    translate: 3cqw 55cqh;
+  }
+  100% {
+    translate: -2cqw 112cqh;
+    rotate: y 1080deg;
+    opacity: 0;
+  }
+}
+
+/* Sparks running round the frame: the dash pattern is 100 units long (pathLength) */
+@keyframes frame-trace {
+  to {
+    stroke-dashoffset: -100;
+  }
+}
+
+@keyframes ripple {
+  from {
+    scale: 0.6;
+    opacity: 0.7;
+  }
+  to {
+    scale: 1.5;
+    opacity: 0;
+  }
+}
+
+@keyframes breathe {
+  0%,
+  100% {
+    scale: 1;
+  }
+  50% {
+    scale: 1.035;
+  }
+}
+
+@keyframes glow-pulse {
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@theme {
+  --animate-coin-fall: coin-fall 8s ease-in infinite;
+  --animate-frame-trace: frame-trace 6s linear infinite;
+  --animate-ripple: ripple 4s ease-out infinite;
+  --animate-breathe: breathe 4s ease-in-out infinite;
+  --animate-glow-pulse: glow-pulse 4s ease-in-out infinite;
+}
+
+/* Page loader (components/ui/brand-loader.tsx) */
+@keyframes loader-glow {
+  0%,
+  100% {
+    opacity: 0.8;
+    scale: 0.97;
+  }
+  50% {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+/* Lakshmi coin pops in, a glint crosses it, then it is tossed and lands on the logo face */
+@keyframes loader-coin-in {
+  from {
+    opacity: 0;
+    scale: 0.5;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+@keyframes loader-coin-shine {
+  from {
+    translate: 0 0;
+  }
+  to {
+    translate: 600% 0;
+  }
+}
+
+@keyframes loader-coin-flip {
+  0%,
+  45% {
+    transform: translateY(0) rotateY(0deg);
+  }
+  62% {
+    transform: translateY(-10%) rotateY(100deg);
+  }
+  80% {
+    transform: translateY(0) rotateY(192deg);
+  }
+  90% {
+    transform: translateY(0) rotateY(176deg);
+  }
+  100% {
+    transform: translateY(0) rotateY(180deg);
+  }
+}
+
+/* Home About panel: the coin keeps turning over, resting 5 s on Lakshmi (1 s still, then
+   the coin rain) and about 5 s on the logo each 12 s round, always turning the same way. Each
+   round starts as the coin settles back on Lakshmi */
+@keyframes coin-loop {
+  0%,
+  42% {
+    transform: translateY(0) rotateY(0deg);
+  }
+  45.5% {
+    transform: translateY(-8%) rotateY(95deg);
+  }
+  49% {
+    transform: translateY(0) rotateY(186deg);
+  }
+  52%,
+  88% {
+    transform: translateY(0) rotateY(180deg);
+  }
+  92% {
+    transform: translateY(-8%) rotateY(275deg);
+  }
+  97% {
+    transform: translateY(0) rotateY(366deg);
+  }
+  100% {
+    transform: translateY(0) rotateY(360deg);
+  }
+}
+
+/* One coin dropping from Lakshmi's hand, spinning as it falls; played once per coin each
+   round, hidden before its start and after it lands (components/ui/coin-flip.tsx) */
+@keyframes coin-drop {
+  0% {
+    top: 0;
+    opacity: 0;
+    transform: rotateY(0deg);
+  }
+  8%,
+  88% {
+    opacity: 1;
+  }
+  100% {
+    top: 100%;
+    opacity: 0;
+    transform: rotateY(540deg);
+  }
+}
+
+@theme {
+  --animate-coin-loop: coin-loop 12s ease-in-out infinite;
+  --animate-coin-drop: coin-drop 0.8s ease-in both;
+  --animate-loader-coin-in: loader-coin-in 0.5s cubic-bezier(0.2, 0.8, 0.2, 1.2) both;
+  --animate-loader-coin-shine: loader-coin-shine 0.9s ease-in-out 0.4s both;
+  --animate-loader-coin-flip: loader-coin-flip 2.4s ease-in-out both;
+  /* Glows once the coin has landed on the logo */
+  --animate-loader-logo-glow: loader-glow 2s ease-in-out 2.4s infinite;
+  --animate-loader-ring: ring-turn 2.4s linear infinite;
+  --animate-loader-glow: loader-glow 2s ease-in-out infinite;
+  /* 3.5s: keep in step with INTERVAL_MS in components/sections/home2/HeroSlider.tsx */
+  --animate-slide-progress: slide-progress 3.5s linear both;
+  --animate-ring-turn: ring-turn 60s linear infinite;
+  --animate-twinkle: twinkle 1.8s ease-in-out infinite alternate;
+}
+
+/* Light moving slowly across a foil headline */
+.foil-shimmer {
+  background-size: 220% 220%;
+  animation: foil-shift 7s ease-in-out infinite alternate;
+}
+
+/*
+ * Cards lift under the pointer, with a deeper shadow and a gold edge. `translate` is used
+ * instead of `transform` so it can sit on a block that a scroll entrance also moves.
+ */
+@utility hover-lift {
+  transition:
+    translate 400ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 400ms cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 400ms ease;
+  @media (hover: hover) {
+    &:hover {
+      translate: 0 -6px;
+      border-color: var(--accent);
+      box-shadow: 0 18px 40px rgba(46, 35, 39, 0.2);
+    }
+  }
+}
+
+/*
+ * The gold line of the How It Works timeline fills downwards, keeping level with the middle
+ * of the screen as the steps scroll past. Browsers without scroll-driven animations, and
+ * reduced-motion users, see it full.
+ */
+@utility timeline-fill {
+  transform-origin: top;
+  @supports (animation-timeline: view()) {
+    @media (prefers-reduced-motion: no-preference) {
+      animation: timeline-fill linear both;
+      animation-timeline: view();
+      animation-range: cover 50vh cover calc(100% - 50vh);
+    }
+  }
+}
+
+@keyframes timeline-fill {
+  from {
+    scale: 1 0;
+  }
+  to {
+    scale: 1 1;
+  }
+}
+
+/*
+ * How It Works steps (inner/StepsTimeline.tsx): tied to scrolling, so they move as slowly as
+ * the reader scrolls. A card glides in from the side set in `--slide-from` as it rises into
+ * view and has settled by the time it is a third of the way up the screen; the step's
+ * medallion grows and turns into place with it. Browsers without scroll-driven animations,
+ * and reduced-motion users, see the steps in place.
+ */
+@utility scroll-slide {
+  @supports (animation-timeline: view()) {
+    @media (prefers-reduced-motion: no-preference) {
+      animation: scroll-slide linear both;
+      animation-timeline: view();
+      animation-range: entry 10% cover 40%;
+    }
+  }
+}
+
+@keyframes scroll-slide {
+  from {
+    opacity: 0;
+    translate: var(--slide-from, 6rem) 0;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+@utility scroll-pop {
+  @supports (animation-timeline: view()) {
+    @media (prefers-reduced-motion: no-preference) {
+      animation: scroll-pop linear both;
+      animation-timeline: view();
+      animation-range: entry 10% cover 35%;
+    }
+  }
+}
+
+@keyframes scroll-pop {
+  from {
+    opacity: 0;
+    scale: 0.4;
+    rotate: -90deg;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+    rotate: 0deg;
+  }
+}
+
+/*
+ * Buttons: a band of light crosses the label once as the pointer arrives, and the button
+ * lifts onto a soft shadow. The light does not sweep back when the pointer leaves.
+ */
+@utility btn-motion {
+  background-image: linear-gradient(
+    110deg,
+    transparent 35%,
+    rgba(255, 255, 255, 0.3) 50%,
+    transparent 65%
+  );
+  background-repeat: no-repeat;
+  /* 300%: wide enough that the whole band waits outside the button's left edge */
+  background-size: 300% 100%;
+  background-position: 100% 0;
+  transition:
+    translate 250ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 250ms cubic-bezier(0.22, 1, 0.36, 1),
+    background-color 200ms ease,
+    border-color 200ms ease;
+  @media (hover: hover) {
+    &:hover {
+      translate: 0 -2px;
+      background-position: 0 0;
+      box-shadow: 0 10px 24px rgba(20, 12, 16, 0.25);
+      transition:
+        translate 250ms cubic-bezier(0.22, 1, 0.36, 1),
+        box-shadow 250ms cubic-bezier(0.22, 1, 0.36, 1),
+        background-color 200ms ease,
+        border-color 200ms ease,
+        background-position 800ms ease;
+    }
+  }
+  &:active {
+    translate: 0 0;
+    box-shadow: none;
+  }
+}
+
+/* Floating Call / WhatsApp (FloatingActions): out of the way while a page hero's own buttons
+   are on screen. Before FloatingActionsShell has measured, a page with hero buttons starts with
+   them hidden, so they never flash over the hero on landing */
+.floating-actions {
+  transition:
+    opacity 300ms ease,
+    translate 300ms cubic-bezier(0.22, 1, 0.36, 1),
+    visibility 300ms;
+}
+
+body:has([data-hero-cta]) .floating-actions:not([data-show]),
+.floating-actions[data-show='false'] {
+  opacity: 0;
+  translate: 0 1rem;
+  visibility: hidden;
+  pointer-events: none;
+}
