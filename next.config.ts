@@ -1,11 +1,25 @@
 import { withPayload } from '@payloadcms/next/withPayload'
 import type { NextConfig } from 'next'
-import createNextIntlPlugin from 'next-intl/plugin'
+import fs from 'fs'
+import { createRequire } from 'module'
 import path from 'path'
 import { fileURLToPath } from 'url'
 
 const __filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(__filename)
+
+// next-intl's plugin loads @swc/core, which unpacks its native binary into a cache folder.
+// On GoDaddy's Linux builder the default folders (/local/.cache, /tmp) fail SWC's safety check
+// (ERR_SWC_NATIVE_CACHE), so point it at a folder inside the app before the plugin loads.
+// SWC_NATIVE_BINDING_CACHE set in the hosting panel still wins.
+if (!process.env.SWC_NATIVE_BINDING_CACHE) {
+  const swcCache = path.join(dirname, '.swc-cache')
+  fs.mkdirSync(swcCache, { recursive: true })
+  process.env.SWC_NATIVE_BINDING_CACHE = swcCache
+}
+const requireCjs = createRequire(import.meta.url)
+// Loaded with require (not import) so it runs after the line above
+const createNextIntlPlugin = requireCjs('next-intl/plugin') as typeof import('next-intl/plugin').default
 
 const isDev = process.env.NODE_ENV !== 'production'
 

@@ -69,3 +69,6 @@ AGENTS.md
 
 # SQLite database (local)
 /data/
+
+# SWC native binary cache (next.config.ts)
+/.swc-cache/
