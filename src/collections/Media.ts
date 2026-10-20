@@ -1,6 +1,7 @@
 import { APIError, type CollectionConfig } from 'payload'
 
 import { anyone, isStaff, isSuperAdmin } from '@/access'
+import { storagePath } from '@/lib/storage'
 
 // The upload limit in payload.config.ts is sized for videos; images get a smaller one
 const MAX_IMAGE_BYTES = 8 * 1024 * 1024
@@ -35,7 +36,7 @@ export const Media: CollectionConfig = {
   },
   upload: {
     // Photos are kept in the videos folder, next to the video uploads (requested 2026-10-20)
-    staticDir: 'videos/photos',
+    staticDir: storagePath('videos/photos'),
     // No SVG: an SVG can carry scripts and would run on our own domain
     mimeTypes: ['image/jpeg', 'image/png', 'image/webp', 'image/avif'],
     formatOptions: { format: 'webp', options: { quality: 82 } },

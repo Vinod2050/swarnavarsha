@@ -16,6 +16,7 @@ import { Testimonials } from './collections/Testimonials'
 import { Users } from './collections/Users'
 import { FeedbackVideos, Videos } from './collections/Videos'
 import { Navigation } from './globals/Navigation'
+import { migrations } from './migrations'
 import { Offer } from './globals/Offer'
 import { SiteSettings } from './globals/SiteSettings'
 
@@ -127,6 +128,9 @@ export default buildConfig({
     client: {
       url: process.env.DATABASE_URI || '',
     },
+    // In production the app applies new migrations itself when it starts, so the server needs
+    // no Payload CLI (shared hosting runs only the standalone build)
+    prodMigrations: migrations,
   }),
   sharp,
   plugins: [],

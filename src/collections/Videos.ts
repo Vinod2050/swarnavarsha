@@ -10,12 +10,13 @@ import { isStaff } from '@/access'
 import { auditChange, recordAudit } from '@/hooks/audit'
 import { revalidateCollection, revalidateCollectionDelete } from '@/hooks/revalidate'
 import { VIDEO_LIMITS } from '@/lib/content'
+import { storagePath } from '@/lib/storage'
 
-// Uploaded files live under uploads/ (relative to where the app runs), apart from any source
+// Uploaded files live under uploads/ (in STORAGE_DIR, see lib/storage.ts), apart from any source
 // files kept in the project, so a file with the same name never gets renamed to "-1"
 const upload = (folder: string) => ({
   mimeTypes: ['video/mp4', 'video/webm'],
-  staticDir: `uploads/${folder}`,
+  staticDir: storagePath(`uploads/${folder}`),
 })
 
 const title: Field = {

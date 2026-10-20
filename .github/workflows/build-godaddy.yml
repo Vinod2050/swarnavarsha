@@ -1,0 +1,62 @@
+# Builds the site on Linux for GoDaddy shared hosting (D-09) and offers it as a zip to download.
+# It must be built on Linux: the image (sharp) and database (libsql) drivers are platform-specific.
+#
+# Before the first run, add these in GitHub: Settings > Secrets and variables > Actions > Variables
+#   NEXT_PUBLIC_SITE_URL      https://your-domain.in   (baked into the sitemap and robots.txt)
+#   NEXT_PUBLIC_GA_ID         G-XXXXXXXXXX             (optional)
+#   SITE_INDEXING             leave unset for the live site, "off" for a test site
+#   ROBOTS_BLOCK_AI_TRAINING  "true" to block AI-training crawlers (optional)
+# Server secrets (PAYLOAD_SECRET, DATABASE_URI ...) are NOT needed here; they are set in cPanel.
+
+name: Build for GoDaddy
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      NEXT_OUTPUT: standalone
+      NEXT_TELEMETRY_DISABLED: '1'
+      NEXT_PUBLIC_SITE_URL: ${{ vars.NEXT_PUBLIC_SITE_URL }}
+      NEXT_PUBLIC_GA_ID: ${{ vars.NEXT_PUBLIC_GA_ID }}
+      SITE_INDEXING: ${{ vars.SITE_INDEXING }}
+      ROBOTS_BLOCK_AI_TRAINING: ${{ vars.ROBOTS_BLOCK_AI_TRAINING }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 12.10.1 # same as the developer PC, so the lock file reads the same
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm lint
+      - run: pnpm typecheck
+      - run: pnpm build
+
+      # The standalone build leaves out public/ and .next/static; add them next to server.js
+      - name: Put the build together
+        run: |
+          mkdir deploy
+          # -L turns pnpm's links into real files; cPanel's zip extract does not keep links
+          cp -rL .next/standalone/. deploy/
+          cp -r public deploy/public
+          mkdir -p deploy/.next
+          cp -r .next/static deploy/.next/static
+          rm -f deploy/.env deploy/.env.*
+          cd deploy && zip -qr ../suvarnavarsha-godaddy.zip .
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: suvarnavarsha-godaddy-${{ github.run_number }}
+          path: suvarnavarsha-godaddy.zip
+          retention-days: 14

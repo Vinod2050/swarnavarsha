@@ -33,8 +33,14 @@ const securityHeaders = [
 ]
 
 const nextConfig: NextConfig = {
-  // Set NEXT_OUTPUT=standalone for the production Docker image (deployment phase).
+  // NEXT_OUTPUT=standalone builds the self-contained server.js used on GoDaddy
+  // (.github/workflows/build-godaddy.yml, docs/deploy-godaddy.md).
   output: process.env.NEXT_OUTPUT === 'standalone' ? 'standalone' : undefined,
+  // File tracing copies sharp's .node file but not the libvips libraries beside it (pnpm),
+  // so image resizing fails in the standalone build without this
+  outputFileTracingIncludes: {
+    '/**': ['./node_modules/.pnpm/@img+sharp-*/node_modules/@img/**/*'],
+  },
   images: {
     formats: ['image/avif', 'image/webp'],
     localPatterns: [
