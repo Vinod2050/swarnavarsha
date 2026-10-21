@@ -4,6 +4,13 @@
 > repo and runs install → `pnpm run build` → `pnpm run start` itself; set secrets in its
 > Secrets screen. This cPanel guide is kept only as an alternative. Check hosting changes with
 > GoDaddy's validator: `node ~/.claude/skills/godaddy-nodejs-hosting/scripts/validate-paas.mjs .`
+>
+> **Storage on Node.js Hosting:** each deploy rebuilds the app folder, so the database and uploads
+> there are lost. Only `/private` (private) and `public/assets` (public) survive. Set these Secrets:
+> `DATABASE_URI=file:/private/suvarnavarsha.db` and `STORAGE_DIR=/private`. To move existing
+> content, stop the app and upload `data/suvarnavarsha.db`, `uploads/` and `videos/photos/` into
+> Private Storage in the File Manager (the app runs pending migrations on start). Never start
+> it on an empty database: whoever opens `/admin` first could create the super admin.
 
 Decisions D-03 (SQLite) and D-09 (GoDaddy shared hosting). The site runs as a cPanel
 **Node.js app**. It is never built on the server: shared hosting has too little memory, and the

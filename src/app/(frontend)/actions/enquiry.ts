@@ -5,7 +5,6 @@ import { headers } from 'next/headers'
 import { hasLocale } from 'next-intl'
 
 import { routing } from '@/i18n/routing'
-import { isEmailConfigured, sendEnquiryEmail } from '@/lib/email'
 import { getPayloadClient, hasDatabase } from '@/lib/payload'
 import { enquirySchema, type EnquiryField } from '@/lib/schemas'
 
@@ -71,12 +70,10 @@ export async function submitEnquiry(raw: unknown, localeRaw: string): Promise<En
       })
     }
 
-    if (isEmailConfigured()) {
-      await sendEnquiryEmail(enquiry)
-    } else if (!stored) {
-      // Nowhere to store or send the enquiry. Fine while designing; never lose one in production.
+    if (!stored) {
+      // Nowhere to store the enquiry. Fine while designing; never lose one in production.
       if (process.env.NODE_ENV === 'production') return { ok: false, error: 'server' }
-      console.info('[enquiry] design phase — not stored or emailed:', enquiry)
+      console.info('[enquiry] design phase — not stored:', enquiry)
     }
 
     return { ok: true }
