@@ -54,6 +54,9 @@ const nextConfig: NextConfig = {
     // GoDaddy's builder reports .next/lock as held even when no other build runs
     // ("Another next build process is already running"), so skip the build lock
     lockDistDir: false,
+    // One build worker instead of one per CPU: each worker has its own memory, and GoDaddy's
+    // build container is small
+    cpus: 1,
   },
   // File tracing copies sharp's .node file but not the libvips libraries beside it (pnpm),
   // so image resizing fails in the standalone build without this
