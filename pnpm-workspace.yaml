@@ -10,3 +10,7 @@ allowBuilds:
 
 patchedDependencies:
   payload@3.90.2: patches/payload@3.90.2.patch
+
+# GoDaddy's preview server runs npm in the same folder. Without this, pnpm stops at a
+# "remove node_modules and reinstall? (Y/n)" question that nobody can answer during a deploy.
+confirmModulesPurge: false
