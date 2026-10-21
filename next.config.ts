@@ -50,6 +50,11 @@ const nextConfig: NextConfig = {
   // NEXT_OUTPUT=standalone builds the self-contained server.js used on GoDaddy
   // (.github/workflows/build-godaddy.yml, docs/deploy-godaddy.md).
   output: process.env.NEXT_OUTPUT === 'standalone' ? 'standalone' : undefined,
+  experimental: {
+    // GoDaddy's builder reports .next/lock as held even when no other build runs
+    // ("Another next build process is already running"), so skip the build lock
+    lockDistDir: false,
+  },
   // File tracing copies sharp's .node file but not the libvips libraries beside it (pnpm),
   // so image resizing fails in the standalone build without this
   outputFileTracingIncludes: {
